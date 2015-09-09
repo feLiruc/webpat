@@ -1,0 +1,66 @@
+- var projectName = 'Project Name'
+- var projectSlogan = 'Slogan of the project.'
+- var projectDescription = 'Short project description.'
+- var urlWebsite = 'http://www.website.com.br'
+- var socialImage = 'http://www.placehold.it/100x100'
+- var menu = ['index','portfolio','contact']
+
+doctype 5
+html(lang='pt-BR')
+head
+	meta(charset='UTF-8')
+
+	// Padrões
+	meta(name="description", content="#{projectName} - #{projectSlogan}")
+	meta(name="keywords", content="keywords, for, indexers")
+	meta(name="author", content="Felipe Marinho")
+	meta(name="rating", content="general")
+	meta(name="robots", content="index,follow")
+	meta(name="revisit-after", content="5 days")
+	meta(name="generator", content="Sublime Text 3")
+	meta(http-equiv="content-language", content="pt-br")
+	meta(name="viewport", content="width=device-width, initial-scale=1")
+
+	// Facebook
+	meta(property="og:type", content="website")
+	meta(property="og:title", content="#{projectName} - #{projectSlogan}")
+	meta(property="og:image", content="#{socialImage}")
+	meta(property="og:url", content="#{urlWebsite}")
+	meta(property="og:site_name", content="#{projectName}")
+	meta(property="og:description", content="#{projectDescription}")
+	
+	// Twitter
+	meta(name="twitter:card", content="summary")
+	meta(name="twitter:url", content="#{urlWebsite}")
+	meta(name="twitter:title", content="#{projectName} - #{projectSlogan}")
+	meta(name="twitter:description", content="#{projectDescription}.")
+	meta(name="twitter:image", content="#{socialImage}")
+
+	title #{projectName} - #{projectSlogan}
+	link(rel="stylesheet", href="css/reset.min.css")
+	link(rel="stylesheet", href="css/padrao.min.css")
+	link(rel="stylesheet", href="css/index.min.css")
+
+	link(href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,600,700', rel='stylesheet', type='text/css')
+
+	script(src="js/plugins/html5shiv.js")
+
+body
+
+	header#topo
+		.wrapper
+			nav#menu
+			each element in menu
+				li
+					a(href="#")=element
+
+	
+	section
+	
+	footer
+
+	script(src="js/plugins/respond.min.js")
+	script(src="js/plugins/jquery-2.0.3.min.js")
+
+	script(src="js/padrao.min.js")
+	script(src="js/index.min.js")
